@@ -193,6 +193,10 @@
   }
 }
 
+.custom-table {
+  background-color: #dc3545; /* Bootstrap's bg-danger color */
+}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
