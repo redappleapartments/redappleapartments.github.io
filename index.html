@@ -9,6 +9,57 @@
     <link rel = "stylesheet" href = "assets/fontawesome/css/fontawesome.css">
     <link rel = "stylesheet" href = "assets/fontawesome/css/brands.css">
     <link rel = "stylesheet" href = "assets/fontawesome/css/solid.css">
+    <style>
+      .carousel-item{ 
+        transition: transform 2s ease;
+      }
+
+      .carousel-item.active .scroll-left{ 
+        animation: scrollLeft 60s linear infinite;
+      }
+
+      .carousel-item.active .scroll-right{ 
+        animation: scrollRight 60s linear infinite;
+      }
+
+      @keyframes scrollLeft{ 
+        0%{
+          transform: translateX(0);
+        }
+
+        100%{
+          transform: translateX(-100%);
+        }
+      }
+
+      @keyframes scrollRight{ 
+        0%{
+          transform: translateX(0); 
+        }
+
+        100%{
+          transform: translateX(100%); 
+        }
+      }
+
+      .icon-container{ 
+        display: flex; 
+        justify-content: 
+        center; width: 200%;
+      }
+
+      .icon-container i{ 
+        flex: 1; 
+        text-align: center;
+      }
+
+      .row-container{ 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px;
+      }
+    </style>
   </head>
   <body style = "overflow-x: hidden; font-size: 10pt;">
     <!-- Header Section -->
@@ -30,7 +81,7 @@
           <div class = "navbar-nav mx-auto">
             <a class = "nav-item nav-link" href = "#about"><b>ABOUT</b></a>
             <a class = "nav-item nav-link" href = "#availability"><b>AVAILABILITY</b></a>
-            <a class = "nav-item nav-link" href = "#amenities"><b>AMENITIES</b></a>
+            <a class = "nav-item nav-link" href = "#partners"><b>PARTNERS</b></a>
             <a class = "nav-item nav-link" href = "#socials"><b>SOCIALS</b></a>
             <a class = "nav-item nav-link" href = "#contact"><b>CONTACT</b></a>
           </div>
@@ -129,13 +180,6 @@
                         <td>$1,450.00</td>
                         <td><span class = "badge text-bg-success rounded-pill">READY</span></td>
                       </tr>
-                      <!--<tr>
-                        <td><b>25</b></td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>$1,600.00</td>
-                        <td><span class = "badge text-bg-success rounded-pill">READY</span></td>
-                      </tr>-->
                       <tr>
                         <td><b>30</b></td>
                         <td>3</td>
@@ -176,34 +220,38 @@
         </div>
       </div>
     </div>
-    <!-- Amenities Section -->
+    <!-- Partners Section -->
     <div class = "container">
       <div class = "row">
         <div class = "col-12">
           <div class = "card border-danger border-2 my-2">
-            <b class = "card-header bg-transparent border-danger border-2 text-danger" id = "amenities">AMENITIES ⚙️</b>
+            <b class = "card-header bg-transparent border-danger border-2 text-danger" id = "partners">PARTNERS ⚙️</b>
             <div class = "card-body">
-              <p class = "card-text">RAA offers an assortment of various amenities: from a 5-foot deep swimming pool to 5-two-story buildings.</p>
-              <div class = "row g-1">
-                <div class = "col-6">
-                  <ul class = "list-group">
-                    <li class = "list-group-item list-group-item-danger d-flex justify-content-start align-items-center"><span class = "badge text-bg-danger rounded-pill">Outdoor Garbage Dumpster</span></li>
-                    <li class = "list-group-item list-group-item-danger d-flex justify-content-start align-items-center"><span class = "badge text-bg-danger rounded-pill">Outdoor Locker Mailboxes</span></li>
-                    <li class = "list-group-item list-group-item-danger d-flex justify-content-start align-items-center"><span class = "badge text-bg-danger rounded-pill">Indoor Fire Extinguishers</span></li>
-                    <li class = "list-group-item list-group-item-danger d-flex justify-content-start align-items-center"><span class = "badge text-bg-danger rounded-pill">Swimming Pool & Deck</span></li>
-                    <li class = "list-group-item list-group-item-danger d-flex justify-content-start align-items-center"><span class = "badge text-bg-danger rounded-pill">Emergency Pool Phone</span></li>
-                    <li class = "list-group-item list-group-item-danger d-flex justify-content-start align-items-center"><span class = "badge text-bg-danger rounded-pill">Two-Story Buildings</span></li>
-                  </ul>
-                </div>
-                <div class = "col-6">
-                  <ul class = "list-group">
-                    <li class = "list-group-item list-group-item-danger d-flex justify-content-start align-items-center"><span class = "badge text-bg-danger rounded-pill">Brick Construction & Exterior</span></li>
-                    <li class = "list-group-item list-group-item-danger d-flex justify-content-start align-items-center"><span class = "badge text-bg-danger rounded-pill">Canopy Roof & Carports</span></li>
-                    <li class = "list-group-item list-group-item-danger d-flex justify-content-start align-items-center"><span class = "badge text-bg-danger rounded-pill">Coaxial Gigabit Internet</span></li>
-                    <li class = "list-group-item list-group-item-danger d-flex justify-content-start align-items-center"><span class = "badge text-bg-danger rounded-pill">Stairways & Stairwells</span></li>
-                    <li class = "list-group-item list-group-item-danger d-flex justify-content-start align-items-center"><span class = "badge text-bg-danger rounded-pill">Concrete Slab Balcony</span></li>
-                    <li class = "list-group-item list-group-item-danger d-flex justify-content-start align-items-center"><span class = "badge text-bg-danger rounded-pill">Metro Bus Stop #26</span></li>
-                  </ul>
+              <p class = "card-text">RAA has partnered up with the following companies.</p>
+              <div id = "partnersCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class = "carousel-inner">
+                  <div class = "carousel-item active">
+                    <div class = "row-container">
+                      <div class = "icon-container scroll-left">
+                        <i class = "fa-brands fa-apple fa-2xl mx-3"></i>
+                        <i class = "fa-brands fa-google fa-2xl mx-3"></i>
+                        <i class = "fa-brands fa-microsoft fa-2xl mx-3"></i>
+                        <i class = "fa-brands fa-amazon fa-2xl mx-3"></i>
+                      </div>
+                      <div class = "icon-container scroll-right">
+                        <i class = "fa-brands fa-youtube fa-2xl mx-3"></i>
+                        <i class = "fa-brands fa-pinterest fa-2xl mx-3"></i>
+                        <i class = "fa-brands fa-snapchat fa-2xl mx-3"></i>
+                        <i class = "fa-brands fa-tiktok fa-2xl mx-3"></i>
+                      </div>
+                      <div class = "icon-container scroll-left">
+                        <i class = "fa-brands fa-spotify fa-2xl mx-3"></i>
+                        <i class = "fa-brands fa-reddit fa-2xl mx-3"></i>
+                        <i class = "fa-brands fa-slack fa-2xl mx-3"></i>
+                        <i class = "fa-brands fa-github fa-2xl mx-3"></i>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
