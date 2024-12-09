@@ -59,6 +59,13 @@
         align-items: center; 
         gap: 15px;
       }
+
+      #map{
+        position: absolute; 
+        top: 0; 
+        bottom: 0; 
+        width: 100%;
+      }
     </style>
   </head>
   <body style = "overflow-x: hidden; font-size: 10pt;">
@@ -81,6 +88,7 @@
           <div class = "navbar-nav mx-auto">
             <a class = "nav-item nav-link" href = "#about"><b>ABOUT</b></a>
             <a class = "nav-item nav-link" href = "#availability"><b>AVAILABILITY</b></a>
+            <a class = "nav-item nav-link" href = "#maps"><b>MAP</b></a>
             <a class = "nav-item nav-link" href = "#partners"><b>PARTNERS</b></a>
             <a class = "nav-item nav-link" href = "#socials"><b>SOCIALS</b></a>
             <a class = "nav-item nav-link" href = "#contact"><b>CONTACT</b></a>
@@ -215,6 +223,21 @@
             </div>
             <div class = "card-footer bg-transparent border-danger border-2">
               <small class = "text-body-secondary">Updated 12/01/2024</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Map Section -->
+    <div class = "container">
+      <div class = "row">
+        <div class = "col-12">
+          <div class = "card border-danger border-2 my-2">
+            <b class = "card-header bg-transparent border-danger border-2" id = "map">MAP 🗺️</b>
+            <div class = "card-body">
+              <p class = "card-text">Red Apple Apartments (RAA)</p>
+              <div id = "map">
+              </div>
             </div>
           </div>
         </div>
@@ -369,5 +392,15 @@
     </footer>
     <!--JavaScript-->
     <script src = "js/bootstrap.js"></script>
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1Ijoibm9lc2ltaWMwMDAiLCJhIjoiY200Z2hmYzlrMWg5aDJxcTAzMm9pNG52YiJ9.ADQte7yxADlE6fpvEvy84g';
+      const map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v12',
+          center: [-95.511636, 29.800325],
+          zoom: 18.75,
+          bearing: 90
+      });
+    </script>
   </body>
 </html>
