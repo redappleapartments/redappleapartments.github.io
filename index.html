@@ -413,13 +413,44 @@
           zoom: 18,
           bearing: 90
       });
-    
-      const marker = new mapboxgl.Marker()
-        .setLngLat([-95.511636, 29.800325])
-        .setPopup(new mapboxgl.Popup({ offset: 25 })
-          .setText('Red Apple Apartments'))
+
+      const amenities = [
+        {
+          name: 'Main Office',
+          color: '#dc3545',
+          lngLat: [-95.511718,29.800401]
+        },
+
+        {
+          name: 'Metro Bus Stop #26',
+          color: '#dc3545',
+          lngLat: [-95.511721,29.800659]
+        },
+
+        {
+          name: 'Swimming Pool & Deck',
+          color: '#dc3545',
+          lngLat: [-95.511595,29.800212]
+        },
+
+        {
+          name: 'Locker MailBoxes',
+          color: '#dc3545',
+          lngLat: [-95.511736,29.800138]
+        }
+      ]
+
+      amenities.forEach(({name, lngLat}) => {
+        const popup = new mapboxgl.Popup({offset: 25}).setText(name);
+
+        new mapboxgl.Marker({
+          scale: 0.5
+        })
+
+        .setLngLat(lngLat)
+        .setPopup(popup)
         .addTo(map);
+      })
     </script>
-    
   </body>
 </html>
