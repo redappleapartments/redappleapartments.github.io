@@ -440,10 +440,11 @@
         }
       ]
 
-      amenities.forEach(({name, lngLat}) => {
+      amenities.forEach(({name, color, lngLat}) => {
         const popup = new mapboxgl.Popup({offset: 25}).setText(name);
 
         new mapboxgl.Marker({
+          color,
           scale: 0.5
         })
 
