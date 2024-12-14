@@ -413,6 +413,13 @@
           zoom: 18,
           bearing: 90
       });
+    
+      const marker = new mapboxgl.Marker()
+        .setLngLat([-95.511636, 29.800325])
+        .setPopup(new mapboxgl.Popup({ offset: 25 })
+          .setText('Red Apple Apartments'))
+        .addTo(map);
     </script>
+    
   </body>
 </html>
