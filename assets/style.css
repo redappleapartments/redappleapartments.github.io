@@ -61,3 +61,12 @@
   .social-icon:hover{
     color: #dc3545;
   }
+
+  .company_icon{
+    color: black;
+    transition: color 0.3s;
+  }
+
+  .company-icon:hover{
+    color: #dc3545;
+  }
