@@ -61,3 +61,14 @@
   .social-icon:hover{
     color: #dc3545;
   }
+
+  .day-cell {
+    background-color: dark;
+    color: white;
+  }
+  
+  .time-cell {
+    background-color: dark;
+    color: white;
+  }
+  
