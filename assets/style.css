@@ -3,11 +3,11 @@
 }
 
 .carousel-item.active .scroll-left{ 
-    animation: scrollLeft 60s linear infinite;
+    animation: scrollLeft 45s linear infinite;
 }
 
 .carousel-item.active .scroll-right{ 
-    animation: scrollRight 60s linear infinite;
+    animation: scrollRight 45s linear infinite;
 }
 
 @keyframes scrollLeft{
@@ -16,7 +16,7 @@
     }
 
     100%{
-      transform: translateX(-75%);
+      transform: translateX(-60%);
     }
 }
 
@@ -26,7 +26,7 @@
     }
 
     100%{
-      transform: translateX(75%); 
+      transform: translateX(60%); 
     }
 }
 
