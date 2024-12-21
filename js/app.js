@@ -1,5 +1,5 @@
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
-import { app } from "./firebase.js"; // Adjust the path if necessary
+import { app } from "js/firebase.js"; // Adjust the path if necessary
 
 const db = getFirestore(app);
 
