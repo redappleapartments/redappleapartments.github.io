@@ -1,7 +1,5 @@
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
-import { app } from "js/firebase.js"; // Adjust the path if necessary
-
-const db = getFirestore(app);
+import { db } from "./firebase.js"; // Adjust the path if necessary
+import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
 
 document.getElementById('applyForm').addEventListener('submit', async (e) => {
   e.preventDefault();
