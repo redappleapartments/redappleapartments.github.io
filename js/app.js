@@ -16,10 +16,10 @@ document.getElementById('applyForm').addEventListener('submit', async (e) => {
       email,
       phone
     });
-    console.log('Document written with ID: ', docRef.id);
-    alert('Application submitted successfully!');
+    console.log('Document ID: ', docRef.id);
+    alert('Submission Successfull!');
   } catch (e) {
-    console.error('Error adding document: ', e);
-    alert('Error submitting application. Please try again.');
+    console.error('Error Appending: ', e);
+    alert('Submission Error. Try again!');
   }
 });
