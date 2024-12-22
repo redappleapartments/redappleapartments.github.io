@@ -8,6 +8,7 @@ document.getElementById('applyForm').addEventListener('submit', async (e) => {
   let lastName = document.getElementById('last_name').value;
   let email = document.getElementById('email').value;
   let phone = document.getElementById('phone').value;
+  const unit = document.getElementById('unit').value;
 
   firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1).toLowerCase();
   lastName = lastName.charAt(0).toUpperCase() + lastName.slice(1).toLowerCase();
@@ -41,6 +42,7 @@ document.getElementById('applyForm').addEventListener('submit', async (e) => {
       lastName,
       email,
       phone,
+      unit,
       date,
       time
     });
