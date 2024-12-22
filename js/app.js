@@ -13,7 +13,7 @@ document.getElementById('applyForm').addEventListener('submit', async (e) => {
   lastName = lastName.charAt(0).toUpperCase() + lastName.slice(1).toLowerCase();
   const nameRegex = /^[A-Za-z]+$/;
   if (!nameRegex.test(firstName) || !nameRegex.test(lastName)) {
-    alert('Invalid name format. Please enter a valid first and last name using only alphabetic characters.');
+    alert('Try Again! Enter first and last name using only alphabetic characters (No hyphens, whitespaces, periods, etc.)');
     return;
   }
 
