@@ -4,16 +4,16 @@ import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.1.0/fi
 document.getElementById('applyForm').addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  let firstName = document.getElementById('first_name').value;
-  let lastName = document.getElementById('last_name').value;
+  let first = document.getElementById('first_name').value;
+  let last = document.getElementById('last_name').value;
   let email = document.getElementById('email').value;
   let phone = document.getElementById('phone').value;
   const unit = document.getElementById('unit').value;
 
-  firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1).toLowerCase();
-  lastName = lastName.charAt(0).toUpperCase() + lastName.slice(1).toLowerCase();
+  first = first.charAt(0).toUpperCase() + first.slice(1).toLowerCase();
+  last = last.charAt(0).toUpperCase() + last.slice(1).toLowerCase();
   const nameRegex = /^[A-Za-z]+$/;
-  if (!nameRegex.test(firstName) || !nameRegex.test(lastName)) {
+  if (!nameRegex.test(first) || !nameRegex.test(last)) {
     alert('Try Again! Enter first and last name using only alphabetic characters (No hyphens, whitespaces, periods, etc.)');
     return;
   }
@@ -38,8 +38,8 @@ document.getElementById('applyForm').addEventListener('submit', async (e) => {
 
   try {
     const docRef = await addDoc(collection(db, 'applicants'), {
-      firstName,
-      lastName,
+      first,
+      last,
       email,
       phone,
       unit,
