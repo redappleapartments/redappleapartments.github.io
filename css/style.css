@@ -54,11 +54,11 @@
 }
 
 .social-icon{
-    color: black;
+    color: #dc3545;
 }
   
 .social-icon:hover{
-    color: #dc3545;
+    color: black;
 }
 
 .hyper-link{
