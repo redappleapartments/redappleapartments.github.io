@@ -68,3 +68,9 @@
 .hyper-link:hover{
     color: #dc3545;
 }
+
+.list-unstyled{
+    list-style-type: none;
+    padding-left: 0;
+}
+  
