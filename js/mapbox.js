@@ -34,14 +34,13 @@ const amenities = [
 ]
 
 amenities.forEach(({name, color, lngLat}) => {
-  const popup = new mapboxgl.Popup({offset: 25}).setHTML('<p style = "color: #dc3545;">name</p>');
+  const popup = new mapboxgl.Popup({offset: 25}).setHTML(`<p style="color: ${color};">${name}</p>`);
 
   new mapboxgl.Marker({
     color,
     scale: 0.5
   })
-
   .setLngLat(lngLat)
   .setPopup(popup)
   .addTo(map);
-})
+});
