@@ -13,38 +13,23 @@
   </head>
   <body style = "overflow-x: hidden; font-size: 10pt;">
     <!-- Header Section -->
-    <header class = "navbar navbar-dark bg-dark" style = "height: 56px;">
-      <div class = "container d-flex align-items-center justify-content-start">
-        <a class = "navbar-brand mx-auto" href = "https://discover.redapple.apartments/">
-          <img src = "img/red_apple_logo.png" height = "30" class = "d-inline-block align-text-bottom">
-          <strong> Red Apple Apartments</strong>
+    <header class="navbar navbar-dark bg-dark" style="height: 56px;">
+      <div class="container d-flex align-items-center justify-content-between">
+        <!-- Left: Hamburger Menu -->
+        <button class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Center: Logo -->
+        <a class="navbar-brand mx-auto position-absolute start-50 translate-middle-x" href="https://discover.redapple.apartments/">
+          <img src="img/red_apple_logo.png" height="30" class="d-inline-block align-text-bottom">
+          <strong>RAA</strong>
         </a>
-        <button id = "toggle-dark-mode" class = "btn btn-dark">
-          <i class = "fas fa-moon"></i>
+        <!-- Right: Dark Mode Toggle -->
+        <button id="toggle-dark-mode" class="btn btn-dark ms-auto">
+          <i class="fas fa-moon"></i>
         </button>
       </div>
     </header>
-    <!-- Navigation Section -->
-    <nav class = "navbar navbar-expand-lg navbar-dark bg-danger">
-      <div class = "container">
-        <button class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navbarNav" aria-controls = "navbarNav" aria-expanded = "false" aria-label = "Toggle navigation">
-          <span class = "navbar-toggler-icon"></span>
-        </button>
-        <div class = "collapse navbar-collapse" id = "navbarNav">
-          <div class = "navbar-nav mx-auto">
-            <a class = "nav-item nav-link" href = "#about"><b>ABOUT</b></a>
-            <a class = "nav-item nav-link" href = "#amenities"><b>AMENITIES</b></a>
-            <a class = "nav-item nav-link" href = "#availability"><b>AVAILABILITY</b></a>
-            <a class = "nav-item nav-link" href = "#apply"><b>APPLY</b></a>
-            <a class = "nav-item nav-link" href = "#hours"><b>HOURS</b></a>
-            <a class = "nav-item nav-link" href = "#contact"><b>CONTACT</b></a>
-            <a class = "nav-item nav-link" href = "#maps"><b>MAP</b></a>
-            <a class = "nav-item nav-link" href = "#partners"><b>PARTNERS</b></a>
-            <a class = "nav-item nav-link" href = "#socials"><b>SOCIALS</b></a>
-          </div>
-        </div>
-      </div>
-    </nav>
     <div class = "container pb-3">
       <div class = "row g-3">
         <!-- Jumbotron Section -->
